@@ -4,10 +4,10 @@ subtitle: "Using Quarto and revealjs for Efficient Presentations"
 author: "Joe Corra"
 date: today
 format:
-  # revealjs:
-  #   theme: dracula
-  #   slide-number: true
-  #   transition: slide
+  revealjs:
+    theme: dracula
+    slide-number: true
+    transition: slide
   html:
     theme: lux
     toc: true
