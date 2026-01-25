@@ -34,7 +34,6 @@ Problems with hybrid presentation-documentation slides:
 -   Excessive text detracts from the presentation
 -   "Wall of text" slides are difficult to read in any setting
 
-
 ::: {.content-visible unless-format="revealjs"}
 We've all experienced this: you attend a great presentation, get the slides afterward, and find they're difficult to understand without the presenter's narration. Or you prepare for a presentation, knowing that your slides must do "double duty" as both a presentation tool and a stand-alone document, and create walls of text instead of eye-catching slides.
 
@@ -46,19 +45,15 @@ One solution is to create two separate documents: concise slides for presenting 
 ![](images/bad_slide.png){width="404"}
 
 ::: {.content-visible when-format="revealjs"}
-
 -   This slide performs two jobs poorly.
 
 -   Bad for viewing (Detracts from presentation)
 
 -   Bad for reading (just share a Word doc!)
-
 :::
 
 ::: {.content-visible unless-format="revealjs"}
-
 -   This slide performs two jobs, and it's doing both poorly. The "wall of text" approach detracts from the presentation instead of enhancing it. The presenter might be better off with no slide at all! Further, it also fails at its secondary task of providing a permanent document: it's difficult to read text stretched across a slide, and the author is still space-limited by the format. Why not just share a Word doc?
-
 :::
 
 ## What is Quarto?
@@ -94,12 +89,13 @@ Quarto comes bundled with recent versions of RStudio, or you can install it sepa
 ## What is revealjs?
 
 ::: {.content-visible when-format="revealjs"}
-**HTML presentation framework**
+**HTML presentation framework** 
 
--   Web-based slides
--   Professional appearance
--   Interactive features
--   Works anywhere
+- Web-based slides 
+- Professional appearance 
+- Interactive features 
+- Works anywhere
+
 :::
 
 ::: {.content-visible unless-format="revealjs"}
@@ -107,11 +103,23 @@ reveal.js is a popular open-source HTML presentation framework. When you use Qua
 
 **Advantages over traditional presentation software:**
 
--   **Portable**: Runs in any web browser, no special software needed
--   **Responsive**: Adapts to different screen sizes
--   **Interactive**: Can include live code, interactive visualizations, embedded web content
--   **Version control friendly**: Plain text source files work great with Git
--   **Professional styling**: Beautiful default themes with extensive customization options
+**Portable**: Runs in any web browser, no special software needed
+
+**Responsive**: Adapts to different screen sizes
+
+**Interactive**: Can include live code, interactive visualizations, embedded web content
+
+**Version control friendly**: Plain text source files work great with Git
+
+**Professional styling**: Beautiful default themes with extensive customization options
+
+**When to choose revealjs vs. PowerPoint:**
+
+**Choose revealjs** when you want interactive content, need to include live R code/outputs, want version control integration, or are sharing primarily via web/email
+
+**Choose PowerPoint** when presenting in environments with uncertain tech setups, when collaborators need to edit slides in PowerPoint, or when organizational standards require .pptx
+
+**Note**: Quarto can render to PowerPoint format too, giving you flexibility to switch output formats from the same source
 
 **Navigation:**
 
@@ -120,8 +128,9 @@ reveal.js is a popular open-source HTML presentation framework. When you use Qua
 -   Press 'F' for fullscreen
 -   Press 'O' for overview mode
 
-For R users accustomed to creating reproducible reports, revealjs presentations extend that same philosophy to your presentations.
+**This presentation focuses on the basics:** revealjs offers much more advanced functionality including custom themes, transitions, fragments (incremental reveals), multimedia integration, speaker notes, and sophisticated layouts. We're keeping it simple to focus on the dual-format technique.
 
+For R users accustomed to creating reproducible reports, revealjs presentations extend that same philosophy to your presentations.
 :::
 
 ## Our Solution: One Script for Two Outputs
