@@ -1,19 +1,19 @@
 ---
-title: "Stop Sharing Slide Decks!"
+title: "Can You Share Those Slides?"
 subtitle: "Using Quarto and revealjs for Efficient Presentations"
 author: "Joe Corra"
 date: today
 format:
-  revealjs:
-    theme: dracula
-    slide-number: true
-    transition: slide
-  # html:
-  #   theme: lux
-  #   toc: true
-  #   toc-depth: 2
-  #   number-sections: true
-  #   code-fold: false
+  # revealjs:
+  #   theme: dracula
+  #   slide-number: true
+  #   transition: slide
+  html:
+    theme: lux
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    code-fold: false
 ---
 
 ## Introduction: The Problem
@@ -25,14 +25,12 @@ format:
 Problems with presentation-only slides:
 
 -   Slides lack context after the presentation
--   Audience can't review details later
 -   Recreating content is tedious
 
 Problems with hybrid presentation-documentation slides:
 
--   Presentation is degraded so slides can serve as documents
--   Excessive text detracts from the presentation
--   "Wall of text" slides are difficult to read in any setting
+-   Presentation suffers so slides can serve as documents
+-   "Wall of text" slides are hard to read in any setting
 
 ::: {.content-visible unless-format="revealjs"}
 We've all experienced this: you attend a great presentation, get the slides afterward, and find they're difficult to understand without the presenter's narration. Or you prepare for a presentation, knowing that your slides must do "double duty" as both a presentation tool and a stand-alone document, and create walls of text instead of eye-catching slides.
@@ -63,9 +61,9 @@ One solution is to create two separate documents: concise slides for presenting 
 
 -   Successor to R Markdown
 -   Execute code in your document
--   Output to many different formats (HTML, Word, PDF, & more)
--   Author documents, presentations, dashboards, websites, & books
--   Create reproducible content in R, Python, Julia, & Observable
+-   Output to various formats (HTML, Word, PDF, & more)
+-   Create documents, presentations, dashboards, websites, & books
+-   Reproducible content in R, Python, Julia, & Observable
 -   Works with RStudio, Positron, & Jupyter notebooks
 :::
 

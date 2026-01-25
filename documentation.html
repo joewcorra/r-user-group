@@ -9,7 +9,7 @@
 <meta name="author" content="Joe Corra">
 <meta name="dcterms.date" content="2026-01-25">
 
-<title>Stop Sharing Slide Decks!</title>
+<title>Can You Share Those Slides?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,7 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="quarto_slides_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="quarto_slides_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="quarto_slides_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="quarto_slides_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="quarto_slides_files/libs/bootstrap/bootstrap-514981598f886405bc67e039c5001fd5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -80,12 +80,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="documentation.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction-the-problem" id="toc-introduction-the-problem" class="nav-link active" data-scroll-target="#introduction-the-problem"><span class="header-section-number">1</span> Introduction: The Problem</a></li>
+  <li><a href="#bad-slides-an-example" id="toc-bad-slides-an-example" class="nav-link" data-scroll-target="#bad-slides-an-example"><span class="header-section-number">2</span> Bad Slides: An Example</a></li>
+  <li><a href="#what-is-quarto" id="toc-what-is-quarto" class="nav-link" data-scroll-target="#what-is-quarto"><span class="header-section-number">3</span> What is Quarto?</a></li>
+  <li><a href="#what-is-revealjs" id="toc-what-is-revealjs" class="nav-link" data-scroll-target="#what-is-revealjs"><span class="header-section-number">4</span> What is revealjs?</a></li>
+  <li><a href="#our-solution-one-script-for-two-outputs" id="toc-our-solution-one-script-for-two-outputs" class="nav-link" data-scroll-target="#our-solution-one-script-for-two-outputs"><span class="header-section-number">5</span> Our Solution: One Script for Two Outputs</a></li>
+  <li><a href="#setting-up-your-document" id="toc-setting-up-your-document" class="nav-link" data-scroll-target="#setting-up-your-document"><span class="header-section-number">6</span> Setting Up Your Document</a></li>
+  <li><a href="#rendering-your-outputs" id="toc-rendering-your-outputs" class="nav-link" data-scroll-target="#rendering-your-outputs"><span class="header-section-number">7</span> Rendering Your Outputs</a></li>
+  <li><a href="#live-demonstration" id="toc-live-demonstration" class="nav-link" data-scroll-target="#live-demonstration"><span class="header-section-number">8</span> Live Demonstration</a></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices"><span class="header-section-number">9</span> Best Practices</a></li>
+  <li><a href="#resources-and-next-steps" id="toc-resources-and-next-steps" class="nav-link" data-scroll-target="#resources-and-next-steps"><span class="header-section-number">10</span> Resources and Next Steps</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="header-section-number">11</span> Questions?</a></li>
+  </ul>
+</nav>
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Stop Sharing Slide Decks!</h1>
+<h1 class="title">Can You Share Those Slides?</h1>
 <p class="subtitle lead">Using Quarto and revealjs for Efficient Presentations</p>
 </div>
 
@@ -115,32 +132,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="introduction-the-problem" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-the-problem">Introduction: The Problem</h2>
+<section id="introduction-the-problem" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction-the-problem"><span class="header-section-number">1</span> Introduction: The Problem</h2>
 <p>Problems with presentation-only slides:</p>
 <ul>
 <li>Slides lack context after the presentation</li>
-<li>Audience can’t review details later</li>
 <li>Recreating content is tedious</li>
 </ul>
 <p>Problems with hybrid presentation-documentation slides:</p>
 <ul>
-<li>Presentation is degraded so slides can serve as documents</li>
-<li>Excessive text detracts from the presentation</li>
-<li>“Wall of text” slides are difficult to read in any setting</li>
+<li>Presentation suffers so slides can serve as documents</li>
+<li>“Wall of text” slides are hard to read in any setting</li>
 </ul>
 <p>We’ve all experienced this: you attend a great presentation, get the slides afterward, and find they’re difficult to understand without the presenter’s narration. Or you prepare for a presentation, knowing that your slides must do “double duty” as both a presentation tool and a stand-alone document, and create walls of text instead of eye-catching slides.</p>
 <p>One solution is to create two separate documents: concise slides for presenting and detailed documentation for sharing. But maintaining parallel documents can be time-consuming and error-prone, as changes to one require updating the other. Why not create one product that produces both documentation <em>and</em> slides?</p>
 </section>
-<section id="bad-slides-an-example" class="level2">
-<h2 class="anchored" data-anchor-id="bad-slides-an-example">Bad Slides: An Example</h2>
+<section id="bad-slides-an-example" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="bad-slides-an-example"><span class="header-section-number">2</span> Bad Slides: An Example</h2>
 <p><img src="images/bad_slide.png" class="img-fluid" width="404"></p>
 <ul>
 <li>This slide performs two jobs, and it’s doing both poorly. The “wall of text” approach detracts from the presentation instead of enhancing it. The presenter might be better off with no slide at all! Further, it also fails at its secondary task of providing a permanent document: it’s difficult to read text stretched across a slide, and the author is still space-limited by the format. Why not just share a Word doc?</li>
 </ul>
 </section>
-<section id="what-is-quarto" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-quarto">What is Quarto?</h2>
+<section id="what-is-quarto" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="what-is-quarto"><span class="header-section-number">3</span> What is Quarto?</h2>
 <p>Quarto is an open-source scientific and technical publishing system built on Pandoc. It allows you to create dynamic content that combines narrative text, code, and output in a single document.</p>
 <p><strong>Key features:</strong></p>
 <ul>
@@ -153,8 +168,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Installation:</strong></p>
 <p>Quarto comes bundled with recent versions of RStudio, or you can install it separately from <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
 </section>
-<section id="what-is-revealjs" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-revealjs">What is revealjs?</h2>
+<section id="what-is-revealjs" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="what-is-revealjs"><span class="header-section-number">4</span> What is revealjs?</h2>
 <p>reveal.js is a popular open-source HTML presentation framework. When you use Quarto’s revealjs format, you’re creating web-based slides that run in any modern browser.</p>
 <p><strong>Advantages over traditional presentation software:</strong></p>
 <p><strong>Portable</strong>: Runs in any web browser, no special software needed</p>
@@ -176,8 +191,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>This presentation focuses on the basics:</strong> revealjs offers much more advanced functionality including custom themes, transitions, fragments (incremental reveals), multimedia integration, speaker notes, and sophisticated layouts. We’re keeping it simple to focus on the dual-format technique.</p>
 <p>For R users accustomed to creating reproducible reports, revealjs presentations extend that same philosophy to your presentations.</p>
 </section>
-<section id="our-solution-one-script-for-two-outputs" class="level2">
-<h2 class="anchored" data-anchor-id="our-solution-one-script-for-two-outputs">Our Solution: One Script for Two Outputs</h2>
+<section id="our-solution-one-script-for-two-outputs" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="our-solution-one-script-for-two-outputs"><span class="header-section-number">5</span> Our Solution: One Script for Two Outputs</h2>
 <p>The key insight is that Quarto allows you to specify multiple output formats and conditionally show/hide content based on the format being rendered. This means you can write one source file that generates both concise presentation slides and detailed documentation.</p>
 <p><strong>How it works:</strong></p>
 <ol type="1">
@@ -192,8 +207,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Shared content (that appears in both formats) is simply written normally, without any conditional wrapper.</p>
 </section>
-<section id="setting-up-your-document" class="level2">
-<h2 class="anchored" data-anchor-id="setting-up-your-document">Setting Up Your Document</h2>
+<section id="setting-up-your-document" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="setting-up-your-document"><span class="header-section-number">6</span> Setting Up Your Document</h2>
 <p>Every Quarto document starts with a YAML header that specifies metadata and output options. For our dual-format approach, you’ll specify both revealjs and html formats.</p>
 <p><strong>Complete YAML example:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
@@ -222,8 +237,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>You can customize these extensively - check the Quarto documentation for all available options.</p>
 </section>
-<section id="rendering-your-outputs" class="level2">
-<h2 class="anchored" data-anchor-id="rendering-your-outputs">Rendering Your Outputs</h2>
+<section id="rendering-your-outputs" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="rendering-your-outputs"><span class="header-section-number">7</span> Rendering Your Outputs</h2>
 <p>To generate your outputs, use Quarto’s command-line interface. This gives you precise control over what gets rendered and what it’s named.</p>
 <p><strong>Recommended workflow:</strong></p>
 <ol type="1">
@@ -253,10 +268,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">#   toc: true</span></span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="co">#   number-sections: true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="live-demonstration" class="level2">
-<h2 class="anchored" data-anchor-id="live-demonstration">Live Demonstration</h2>
-<section id="youre-reading-the-documentation-version" class="level3">
-<h3 class="anchored" data-anchor-id="youre-reading-the-documentation-version">You’re Reading the Documentation Version!</h3>
+<section id="live-demonstration" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="live-demonstration"><span class="header-section-number">8</span> Live Demonstration</h2>
+<section id="youre-reading-the-documentation-version" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="youre-reading-the-documentation-version"><span class="header-section-number">8.1</span> You’re Reading the Documentation Version!</h3>
 <p>If you’re reading this, you’re experiencing the HTML document output from our Quarto source file. Notice how each section includes:</p>
 <ul>
 <li>The brief, slide-appropriate content that appears in both formats</li>
@@ -275,10 +290,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Generate both versions of this document using the terminal commands from the previous section. Open them side-by-side to see exactly how the same source creates two complementary outputs.</p>
 </section>
 </section>
-<section id="best-practices" class="level2">
-<h2 class="anchored" data-anchor-id="best-practices">Best Practices</h2>
-<section id="making-the-most-of-dual-format-documents" class="level3">
-<h3 class="anchored" data-anchor-id="making-the-most-of-dual-format-documents">Making the Most of Dual-Format Documents</h3>
+<section id="best-practices" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="best-practices"><span class="header-section-number">9</span> Best Practices</h2>
+<section id="making-the-most-of-dual-format-documents" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="making-the-most-of-dual-format-documents"><span class="header-section-number">9.1</span> Making the Most of Dual-Format Documents</h3>
 <p><strong>Content strategy:</strong></p>
 <ol type="1">
 <li><strong>Shared content</strong>: Core concepts, code examples, and key points go in unmarked sections (visible in both formats)</li>
@@ -306,10 +321,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="resources-and-next-steps" class="level2">
-<h2 class="anchored" data-anchor-id="resources-and-next-steps">Resources and Next Steps</h2>
-<section id="additional-resources" class="level3">
-<h3 class="anchored" data-anchor-id="additional-resources">Additional Resources</h3>
+<section id="resources-and-next-steps" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="resources-and-next-steps"><span class="header-section-number">10</span> Resources and Next Steps</h2>
+<section id="additional-resources" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">10.1</span> Additional Resources</h3>
 <p><strong>Official documentation:</strong></p>
 <ul>
 <li><strong>Quarto</strong>: <a href="https://quarto.org" class="uri">https://quarto.org</a> - Comprehensive guides, examples, and reference</li>
@@ -325,8 +340,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Publishing</strong>: Host your HTML outputs on GitHub Pages, Quarto Pub, or other platforms</li>
 </ul>
 </section>
-<section id="applying-this-technique" class="level3">
-<h3 class="anchored" data-anchor-id="applying-this-technique">Applying This Technique</h3>
+<section id="applying-this-technique" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="applying-this-technique"><span class="header-section-number">10.2</span> Applying This Technique</h3>
 <p>This same approach works for:</p>
 <ul>
 <li><strong>Training materials</strong>: Presentation slides plus detailed tutorial documentation</li>
@@ -336,8 +351,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>The key is thinking about your content in two modes: what you need to <em>present</em> and what your audience needs to <em>reference later</em>.</p>
 </section>
-<section id="try-it-yourself" class="level3">
-<h3 class="anchored" data-anchor-id="try-it-yourself">Try It Yourself</h3>
+<section id="try-it-yourself" class="level3" data-number="10.3">
+<h3 data-number="10.3" class="anchored" data-anchor-id="try-it-yourself"><span class="header-section-number">10.3</span> Try It Yourself</h3>
 <p>Create a simple presentation on a topic you know well:</p>
 <ol type="1">
 <li>Start with basic YAML specifying both formats</li>
@@ -348,10 +363,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Once you’re comfortable with the mechanics, this becomes a natural workflow that actually <em>saves</em> time compared to maintaining separate presentations and documentation.</p>
 </section>
 </section>
-<section id="questions" class="level2">
-<h2 class="anchored" data-anchor-id="questions">Questions?</h2>
-<section id="contact-and-feedback" class="level3">
-<h3 class="anchored" data-anchor-id="contact-and-feedback">Contact and Feedback</h3>
+<section id="questions" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="questions"><span class="header-section-number">11</span> Questions?</h2>
+<section id="contact-and-feedback" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="contact-and-feedback"><span class="header-section-number">11.1</span> Contact and Feedback</h3>
 <p>If you have questions about this technique or want to share how you’ve adapted it for your own work, I’d love to hear from you!</p>
 <p>This presentation and documentation were created using the exact technique described within - eating our own dog food, as they say. The source <code>.qmd</code> file demonstrates every concept discussed, making it a practical template you can adapt for your own presentations.</p>
 <p><strong>Thank you for your time and attention!</strong></p>
