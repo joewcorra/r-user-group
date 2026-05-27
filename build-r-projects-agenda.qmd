@@ -1,0 +1,143 @@
+---
+title: "build-r-projects-agenda"
+format: html
+editor: visual
+---
+
+## Part 1: Project Setup & Workflow Design
+
+-   Intro: thinking about project design
+
+-   What is an R Project (.Rproj)
+
+-   path management with {here}
+
+-   Folder structure
+
+-   Coding style conventions (naming, commenting, readability) and code styling with {styler} or other packages
+
+-   Package management with {renv}
+
+-   Storage and version control with Git/GitHub
+
+## Part 2: Data Retrieval & Ingestion
+
+-   Choosing the right tools for reading data: csv, Excel, JSON, pdf, etc.
+
+-   Raw data vs. clean/processed data, and preserving raw data
+
+-   Creating reusable scripts to programmatically retrieve and process data
+
+-   Documenting data sources
+
+-   Cache and save data with {pins}
+
+-   Think about data storage and collaboration needs (files vs. {pins} vs databases)
+
+-   pulling data via APIs with {httr2) and other site-specific packages (e.g., {tidycensus})
+
+-   web scraping with {rvest}
+
+## Part 3: Data Cleaning & Transformation
+
+-   Principles of tidy data
+
+-   {dplyr}, {tidyr}, and the pipe
+
+-   Tidyverse tools for specific data types: {lubridate} and {stringr}
+
+-   Separate data cleaning and aggregation from data analysis
+
+-   Writing functions: why, when, and how
+
+-   Data QAQC with {assertr} and {pointblank}
+
+-   Saving cleaned data: .rds, csv, Parquet, Arrow/Feather
+
+## Part 4: Analysis & Modeling
+
+-   Organizing your analysis scripts
+
+-   Saving intermediate results in complex pipelines
+
+-   Functional programming (redux); application to analysis
+
+-   Iteration with {purrr}
+
+-   Pipeline-based workflow tools with {targets}
+
+-   Extracting and storing analysis/model outputs
+
+## Part 5: Outputs & Sharing
+
+-   Quarto and Markdown for reproducible reports and presentations
+
+-   Creating plots with {ggplot2} including best practices (themes, saving, size, resolution)
+
+-   Create tables with {gt} and other table tools
+
+-   Creating charts and diagrams with Mermaid
+
+-   Sharing options for code and data: shared folders, GitHub, and {pins} all the way to databases and Posit Connect
+
+-   Writing README files
+
+-   Tracking issues and deferred improvements
+
+-   Documenting assumptions and data decisions
+
+-   internal R packages and shared code
+
+-   Data Dictionaries
+
+-   Tools for managing across repos: GitHub Projects, Planner
+
+-   Example of a complete, shareable R project
+
+## Addendum: Packages & Tools Referenced 
+
+-   here
+
+-   renv
+
+-   pins
+
+-   dplyr
+
+-   tidyr
+
+-   stringr
+
+-   lubridate
+
+-   pointblank
+
+-   arrow
+
+-   purrr
+
+-   targets
+
+-   ggplot2
+
+-   gt (or other table creation packages)
+
+-   httr2
+
+-   rvest
+
+-   air/styler/lentr
+
+-   rcmdcheck
+
+-   testthat
+
+-   usethis
+
+-   devtools
+
+-   Quarto
+
+-   Mermaid
+
+-   Git/GitHub
