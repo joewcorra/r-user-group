@@ -24,6 +24,8 @@ editor: visual
 
 -   Choosing the right tools for reading data: csv, Excel, JSON, pdf, etc.
 
+-   data-reading packages {readr}, {readxl}, {jsonlite}, others
+
 -   Raw data vs. clean/processed data, and preserving raw data
 
 -   Creating reusable scripts to programmatically retrieve and process data
@@ -34,7 +36,7 @@ editor: visual
 
 -   Think about data storage and collaboration needs (files vs. {pins} vs databases)
 
--   pulling data via APIs with {httr2) and other site-specific packages (e.g., {tidycensus})
+-   pulling data via APIs with {httr2} and other site-specific packages (e.g., {tidycensus})
 
 -   web scraping with {rvest}
 
@@ -44,7 +46,7 @@ editor: visual
 
 -   {dplyr}, {tidyr}, and the pipe
 
--   Tidyverse tools for specific data types: {lubridate} and {stringr}
+-   Tidyverse tools for specific data types: {lubridate}, {forcats}, and {stringr}
 
 -   Separate data cleaning and aggregation from data analysis
 
@@ -94,7 +96,7 @@ editor: visual
 
 -   Example of a complete, shareable R project
 
-## Addendum: Packages & Tools Referenced 
+## Addendum: Packages & Tools Referenced
 
 -   here
 
@@ -109,6 +111,8 @@ editor: visual
 -   stringr
 
 -   lubridate
+
+-   forcats
 
 -   pointblank
 
